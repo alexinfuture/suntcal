@@ -1,0 +1,4297 @@
+{
+  "fields": [
+    {
+      "id": 263,
+      "label": "Costs per square foot (For Reference)",
+      "type": "section"
+    },
+    {
+      "id": 266,
+      "label": "Bungalow minimum cost",
+      "type": "number"
+    },
+    {
+      "id": 271,
+      "label": "2 Storey minimum cost",
+      "type": "number"
+    },
+    {
+      "id": 270,
+      "label": "High End home",
+      "type": "number"
+    },
+    {
+      "id": 269,
+      "label": "Unfinished garage",
+      "type": "number"
+    },
+    {
+      "id": 268,
+      "label": "Basement minimum costs",
+      "type": "number"
+    },
+    {
+      "id": 267,
+      "label": "Basement maximum costs",
+      "type": "number"
+    },
+    {
+      "id": 272,
+      "label": "Per Unit Costs",
+      "type": "section"
+    },
+    {
+      "id": 273,
+      "label": "Well",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "228",
+            "operator": "is",
+            "value": "Well & Septic"
+          }
+        ]
+      }
+    },
+    {
+      "id": 274,
+      "label": "Septic",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "30000 * {Number Of Dwellings To Service In The Building::227}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "228",
+            "operator": "is",
+            "value": "Well & Septic"
+          }
+        ]
+      }
+    },
+    {
+      "id": 275,
+      "label": "City Services",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "20000",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "228",
+            "operator": "is",
+            "value": "City Services"
+          }
+        ]
+      }
+    },
+    {
+      "id": 323,
+      "label": "Introduction",
+      "type": "html"
+    },
+    {
+      "id": 8,
+      "label": "When are you hoping to begin construction on your new home?",
+      "type": "text"
+    },
+    {
+      "id": 454,
+      "label": "When are you hoping to begin construction on your new home?",
+      "type": "select"
+    },
+    {
+      "id": 35,
+      "label": "Have you built a home before?",
+      "type": "radio"
+    },
+    {
+      "id": 358,
+      "label": "Well you\u2019ve come to the right place. We're a very experienced home builder.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "35",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "label": "You\u2019re a seasoned veteran!  Who was your builder?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "35",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "label": "Previous builder:",
+      "type": "text",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "36",
+            "operator": "is",
+            "value": "I'll tell you"
+          }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "label": "Thanks!  Are you considering them as well to build your new home?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "36",
+            "operator": "is",
+            "value": "I'll tell you"
+          }
+        ]
+      }
+    },
+    {
+      "id": 357,
+      "label": "If you don't mind, could you offer a few details on what you did and did not like",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "35",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 370,
+      "label": "Please leave the details of what you did and didn't like about your previous home-build experience",
+      "type": "textarea",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "35",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 373,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 12,
+      "label": "Do you already own a lot on which to build?",
+      "type": "radio"
+    },
+    {
+      "id": 90,
+      "label": "That\u2019s wonderful.  It sounds like you\u2019re well on your way already.  Can you please let us know the address so we can begin our research on the feasibility of your project?",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "12",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "label": "Lot Address",
+      "type": "address",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "12",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "label": "Area / Neighbourhood:",
+      "type": "text",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "12",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "label": "Is there an existing building on the property to be demolished?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "12",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 332,
+      "label": "Existing Building (No city lot development permit needed)",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "20",
+            "operator": "is",
+            "value": "0"
+          }
+        ]
+      }
+    },
+    {
+      "id": 86,
+      "label": "Thanks for letting us know.  It\u2019s helpful to know that we won\u2019t need to consider the cost of demolishing an existing structure in the construction estimate.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "20",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 87,
+      "label": "Thanks for letting us know.  We\u2019ll be sure to consider the cost of demolishing the existing structure in the construction estimate.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "20",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 376,
+      "label": "",
+      "type": "page",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "12",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "label": "I can see you\u2019re early in the process.  Are you already working with a realtor?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "12",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "label": "That's great.  Would you be able to provide us with their contact information?  This way we can make sure that they fully understand the requirements that your home will require.  It\u2019s important that the team of professionals you assemble work as a team.",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "26",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "label": "Realtor Name:",
+      "type": "text",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "29",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "label": "Realtor Phone Number:",
+      "type": "text",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "29",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 91,
+      "label": "Realtor Email Address",
+      "type": "email",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "29",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "label": "Real Estate Firm:",
+      "type": "text",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "29",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 92,
+      "label": "That's okay.  No problem.  We\u2019re early in the process and we can connect with your realtor at a later point.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "29",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "label": "Would you like us to connect you with our recommended realtor who can assist you in finding a property ripe for development?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "26",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 89,
+      "label": "Thanks for letting us know.  We\u2019ll be happy to connect you through a virtual meeting.  We\u2019ll be sure to inform our realtor of the requirements for your home to assist in the search.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "40",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 88,
+      "label": "Okay.  One thing that we suggest that you keep in mind is that it is generally premature to begin design of a new home without having a plot of land secured.  There are generally grading, neighbour proximity, and utility servicing considerations to be factored into the plans which are influenced by the land.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "40",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 372,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 95,
+      "label": "To start off, perhaps you can tell me a bit about the home you would like to build.",
+      "type": "html"
+    },
+    {
+      "id": 97,
+      "label": "More details will enable us to provide you with the best service possible.",
+      "type": "textarea"
+    },
+    {
+      "id": 369,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 25,
+      "label": "Next, do you already have building plans for your home?",
+      "type": "radio"
+    },
+    {
+      "id": 44,
+      "label": "That\u2019s great.  You\u2019re already far along in the pre-construction process.  Would you please be able to send us, by e-mail, your design documents so that we can start establishing a high-level, realistic ballpark budget for your project?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 65,
+      "label": "Thank you so much.  This will really help in speeding along the estimating process.  There are plenty of documents which will be required for construction and for accurate estimating.  Just let us know which you don\u2019t have yet and we will be happy to provide assistance in acquiring them.  Documents that we\u2019ll need include:",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "44",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 64,
+      "label": "Okay.  No problem for now.  I understand that you may have invested quite a lot into these plans and you are hesitant to share them.  We\u2019ll be limited to estimating only at a high level based on the square feet of construction, but we can use what we have for now.  We will require all of the plan documents when it comes time to providing a detailed estimate in writing.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "44",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 377,
+      "label": "",
+      "type": "page",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 66,
+      "label": "Permit Plans",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 73,
+      "label": "Property Survey",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 74,
+      "label": "Grading Plan",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 75,
+      "label": "Septic Plan",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 76,
+      "label": "Hydro Layout",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 78,
+      "label": "Mechanical Plan",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 77,
+      "label": "Plumbing Plan (Not typically required but is recommended)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 79,
+      "label": "Energy Efficiency Design Summary (EEDS)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 80,
+      "label": "Mechanical Ventilation Design Summary (MVDS)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 81,
+      "label": "Joist and Beam Plan (Provided by joist manufacturer)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 82,
+      "label": "Truss Plan (Provided by truss manufacturer)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 83,
+      "label": "Building Permit",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 84,
+      "label": "Lighting Plan",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 85,
+      "label": "Interior Finish Schedule (We are happy to connect you with our interior designer for assistance upon request.)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "25",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 378,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 50,
+      "label": "Okay.  Do you have a designer or architect that you are already working with?",
+      "type": "radio"
+    },
+    {
+      "id": 61,
+      "label": "No problem at all.  It\u2019s actually great that you\u2019ve reached out to us in advance of having confirmed your designer.  As a home builder, we are considered the experts in construction budgeting.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "50",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "label": "That's great!  It\u2019s always advantageous when we are able to speak directly with designers.  It helps your home construction team work efficiently together and helps speed up the estimating process as we can talk shop directly with the design professional.  Would you be able to provide us with their contact information?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "50",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 62,
+      "label": "That\u2019s alright.  We\u2019re early in the process and can speak with them later.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "57",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 63,
+      "label": "Thank you very much.  We\u2019re off to a great start already.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "57",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "label": "Name",
+      "type": "name",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "57",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "label": "Phone",
+      "type": "phone",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "57",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "label": "Email",
+      "type": "email",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "57",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "label": "Firm",
+      "type": "text",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "57",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 379,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 94,
+      "label": "Budgeting Next Step",
+      "type": "html"
+    },
+    {
+      "id": 380,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 96,
+      "label": "Budgeting",
+      "type": "section"
+    },
+    {
+      "id": 145,
+      "label": "How many stories above ground will your home be?",
+      "type": "radio"
+    },
+    {
+      "id": 98,
+      "label": "Excluding your basement and garage, would you happen to have a rough idea of the size, in square feet, of the interior living space of your home? If not, our tool can help you determine the size.",
+      "type": "radio"
+    },
+    {
+      "id": 105,
+      "label": "Interior Living Space (Sq. Ft.)",
+      "type": "quantity",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 447,
+      "label": "Preferred Square Footage:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Interior Living Space (Sq. Ft.):105}"
+    },
+    {
+      "id": 104,
+      "label": "That\u2019s great.  It sounds like you\u2019ve put some serious thought into your new home.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 106,
+      "label": "That\u2019s completely normal.  Many people who reach out to us are not as familiar with square feet house sizes as we are.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 381,
+      "label": "",
+      "type": "page",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 107,
+      "label": "Estimating The Size of Your House",
+      "type": "section",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 108,
+      "label": "Why don\u2019t we start by working our way through a short list which will help us extrapolate what may be an appropriate size of house for you based on the number and types of rooms above grade you would like to have?",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 109,
+      "label": "Master Bedroom Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 128,
+      "label": "Master Bedroom Ensuite Bathroom Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 356,
+      "label": "Additional Bedrooms",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 129,
+      "label": "Size of Additional Bedrooms (x1)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "356",
+            "operator": "is",
+            "value": "120"
+          }
+        ]
+      }
+    },
+    {
+      "id": 360,
+      "label": "Size of Additional Bedrooms (x2)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "356",
+            "operator": "is",
+            "value": "240"
+          }
+        ]
+      }
+    },
+    {
+      "id": 359,
+      "label": "Size of Additional Bedrooms (x3)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "356",
+            "operator": "is",
+            "value": "360"
+          }
+        ]
+      }
+    },
+    {
+      "id": 361,
+      "label": "Size of Additional Bedrooms (x4)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "356",
+            "operator": "is",
+            "value": "480"
+          }
+        ]
+      }
+    },
+    {
+      "id": 362,
+      "label": "Size of Additional Bedrooms (x5)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "356",
+            "operator": "is",
+            "value": "600"
+          }
+        ]
+      }
+    },
+    {
+      "id": 127,
+      "label": "Additional Full Bathrooms",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 131,
+      "label": "Half Bathrooms (Powder Rooms)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 126,
+      "label": "Master Walk-in Closet Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 132,
+      "label": "Additional Walk-in Closets",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 382,
+      "label": "",
+      "type": "page",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 125,
+      "label": "Kitchen Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 123,
+      "label": "Kitchen Eating Area",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 124,
+      "label": "Pantry Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 119,
+      "label": "Dining Room Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 120,
+      "label": "Great Room Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 122,
+      "label": "Living Room Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 121,
+      "label": "Family Room Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 118,
+      "label": "Office Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 383,
+      "label": "",
+      "type": "page",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 117,
+      "label": "Foyer Size (Entrance)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 116,
+      "label": "Mudroom Size (Side Entrance)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 134,
+      "label": "Stairwells",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 133,
+      "label": "Hallways",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 135,
+      "label": "Ground Floor Storage",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 136,
+      "label": "Ground Floor Utility Room (When there is no basement)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 448,
+      "label": "",
+      "type": "page",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "98",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 137,
+      "label": "\"Okay.  That's great.  Thanks for all that information.  Based on the number of rooms and their approximate sizes, it looke like the living space of your home will need to be approximately...\u2028\t0 square feet.\"",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "125",
+            "operator": "isnot",
+            "value": ""
+          },
+          {
+            "fieldId": "109",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 142,
+      "label": "Square Feet:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Ground Floor Utility Room (When there is no basement):136} + {Ground Floor Storage:135} + {Hallways:133} + {Stairwells:134} + {Mudroom Size (Side Entrance):116} + {Foyer Size (Entrance):117} + {Office Size:118} + {Family Room Size:121} + {Living Room Size:122} + {Great Room Size:120} + {Dining Room Size:119} + {Pantry Size:124} + {Kitchen Eating Area:123} + {Kitchen Size:125} + {Additional Walk-in Closets:132} + {Master Walk-in Closet Size:126} + {Half Bathrooms (Powder Rooms):131} + {Additional Full Bathrooms:127} + {Master Bedroom Size:109} + {Master Bedroom Ensuite Bathroom Size:128} + {Interior Living Space (Sq. Ft.):105} + {Additional Bedrooms:356} + {Size of Additional Bedrooms (x1):129} + {Size of Additional Bedrooms (x2):360} + {Size of Additional Bedrooms (x3):359} + {Size of Additional Bedrooms (x4):361} + {Size of Additional Bedrooms (x5):362}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "109",
+            "operator": "isnot",
+            "value": ""
+          },
+          {
+            "fieldId": "125",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 384,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 158,
+      "label": "Estimating the Size of Your Garage",
+      "type": "section"
+    },
+    {
+      "id": 146,
+      "label": "Do you know how many square feet you would like your garage to be?",
+      "type": "radio"
+    },
+    {
+      "id": 147,
+      "label": "Great. How many square feet is your garage?",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "146",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 148,
+      "label": "No problem.  How many vehicles are you going to need to store?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "146",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 149,
+      "label": "Will they be average sized vehicles of 20\u2019 or less in length?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "148",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 150,
+      "label": "What is the length of your vehicle?",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "149",
+            "operator": "is",
+            "value": "0"
+          }
+        ]
+      }
+    },
+    {
+      "id": 151,
+      "label": "What is the width of your vehicle?",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "149",
+            "operator": "is",
+            "value": "0"
+          }
+        ]
+      }
+    },
+    {
+      "id": 152,
+      "label": "Do you plan to set aside some additional garage space for storage or a workshop?",
+      "type": "radio"
+    },
+    {
+      "id": 153,
+      "label": "Do you know how many square feet?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "152",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 154,
+      "label": "Great.  How many square feet will this extra garage space be?",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "153",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 155,
+      "label": "Let\u2019s just set aside 150 square feet for the time being.  We can revise this later.  Does that sounds good?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "153",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 156,
+      "label": "Okay.  We\u2019ll just leave it out for the time being.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "155",
+            "operator": "is",
+            "value": "0"
+          }
+        ]
+      }
+    },
+    {
+      "id": 157,
+      "label": "Thanks.  We assume the square footage of your garage will be:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "(( {What is the width of your vehicle?:151} * {What is the length of your vehicle?:150}) * {No problem.  How many vehicles are you going to need to store?:148}) + ({No problem.  How many vehicles are you going to need to store?:148} * {Will they be average sized vehicles of 20\u2019 or less in length?:149}) + {Great.  How many square feet will this extra garage space be?:154} + {Great. How many square feet is your garage?:147} + {Let\u2019s just set aside 150 square feet for the time being.  We can revise this later.  Does that sounds good?:155}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "146",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 159,
+      "label": "Roughly how much of the ceiling of your garage will be beneath second floor finished space?",
+      "type": "select",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "146",
+            "operator": "isnot",
+            "value": "No Garage"
+          },
+          {
+            "fieldId": "146",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 185,
+      "label": "The square footage of your garage will be approximately:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Great. How many square feet is your garage?:147} + {Thanks.  We assume the square footage of your garage will be::157} + {Great.  How many square feet will this extra garage space be?:154}"
+    },
+    {
+      "id": 385,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 160,
+      "label": "Estimating the Size of Your Basement",
+      "type": "section"
+    },
+    {
+      "id": 161,
+      "label": "Are you planning on having a basement?",
+      "type": "radio"
+    },
+    {
+      "id": 163,
+      "label": "Great.  How large of an unfinished basement utility room do you plan to have?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "165",
+            "operator": "is",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "161",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 162,
+      "label": "Thanks!  Are you hoping to finish part or all of your basement as part of this project?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "161",
+            "operator": "is",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "163",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 430,
+      "label": "ALL OF BASEMENT - 1 floor",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Square Feet::142} + {Interior Living Space (Sq. Ft.):105}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "162",
+            "operator": "is",
+            "value": "All of it"
+          },
+          {
+            "fieldId": "145",
+            "operator": "is",
+            "value": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 431,
+      "label": "ALL OF BASEMENT - 2 or more floors",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "( {Square Feet::142} + {Interior Living Space (Sq. Ft.):105} ) / {How many stories above ground will your home be?:145}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "162",
+            "operator": "is",
+            "value": "All of it"
+          },
+          {
+            "fieldId": "145",
+            "operator": ">",
+            "value": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 164,
+      "label": "Sounds good.  We\u2019ll just be sure to account for the insulating of the basement foundation walls, also known as frost walls.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "162",
+            "operator": "is",
+            "value": "Part of it"
+          },
+          {
+            "fieldId": "162",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 165,
+      "label": "Do you know how many square feet of the basement you plan to finish?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "162",
+            "operator": "is",
+            "value": "Part of it"
+          }
+        ]
+      }
+    },
+    {
+      "id": 166,
+      "label": "How many square feet of your basement do you plan to finish?",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "165",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 167,
+      "label": "No problem.  Let\u2019s just go through the same exercise as before to determine what should be an appropriate amount of finished space.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "165",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 405,
+      "label": "",
+      "type": "page",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "165",
+            "operator": "is",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "162",
+            "operator": "isnot",
+            "value": "Part of it"
+          },
+          {
+            "fieldId": "161",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 174,
+      "label": "Recreation Room Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "165",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 168,
+      "label": "Theatre Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "165",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 175,
+      "label": "Full Bathrooms",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "165",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 173,
+      "label": "Full Bathroom Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "175",
+            "operator": "isnot",
+            "value": "0"
+          },
+          {
+            "fieldId": "175",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 176,
+      "label": "Half Bathrooms",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "165",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 177,
+      "label": "Guest Bedrooms",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "165",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 172,
+      "label": "Guest Bedroom Average Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "177",
+            "operator": "isnot",
+            "value": "0"
+          },
+          {
+            "fieldId": "177",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 178,
+      "label": "Guest Bedroom Walk-In Closets",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "177",
+            "operator": "isnot",
+            "value": "0"
+          },
+          {
+            "fieldId": "177",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 171,
+      "label": "Guest Bedroom Walk In Closet Average Size",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "178",
+            "operator": "isnot",
+            "value": "0"
+          },
+          {
+            "fieldId": "178",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 170,
+      "label": "Finished Storage Space",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "165",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 169,
+      "label": "Hobby Room (Pool, Table Tennis, Foosball, Arts and Crafts, Etc.)",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "165",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 179,
+      "label": "Perfect.  Thanks for all that information.  Based on the number of rooms and their approximate sizes, it looks like the basement finished space will need to be approximately:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Recreation Room Size:174} + {Theatre Size:168} +  ( {Full Bathrooms:175} * {Full Bathroom Size:173} )  + {Half Bathrooms:176} +  ( {Guest Bedrooms:177} * {Guest Bedroom Average Size:172} )  +  ( {Guest Bedroom Walk-In Closets:178} * {Guest Bedroom Walk In Closet Average Size:171} ) + {Finished Storage Space:170} + {Hobby Room (Pool, Table Tennis, Foosball, Arts and Crafts, Etc.):169}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "170",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 424,
+      "label": "Too Much Basement Error",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{The amount of square feet you will have for a finished basement will be approximately::187} - {Perfect.  Thanks for all that information.  Based on the number of rooms and their approximate sizes, it looks like the basement finished space will need to be approximately::179}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "179",
+            "operator": ">",
+            "value": "0"
+          }
+        ]
+      }
+    },
+    {
+      "id": 180,
+      "label": "Hmmm...  It looks like the amount of finished space in the basement is likely to be more than will be available based on the size of the foundation.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "424",
+            "operator": "contains",
+            "value": "-"
+          }
+        ]
+      }
+    },
+    {
+      "id": 182,
+      "label": "This can be ironed out in the design phase, but now we have a rough idea of what you would like to build.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "179",
+            "operator": ">",
+            "value": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 404,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 184,
+      "label": "The Total Square Footage of Your Basement",
+      "type": "section",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "161",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 183,
+      "label": "So to summarize, the amount of finished space you would like in your new home will be (Sq. Ft):",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Interior Living Space (Sq. Ft.):105} + {Square Feet::142}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "161",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 187,
+      "label": "The approximate square feet you will have available for a finished basement:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "( ( ( {Interior Living Space (Sq. Ft.):105} + {Square Feet::142} )  / {How many stories above ground will your home be?:145} ) - {Assuming a basement utility room space of approximately::186} ) - ( ({Thanks.  We assume the square footage of your garage will be::157} + {Great. How many square feet is your garage?:147} + {Great.  How many square feet will this extra garage space be?:154}) * {Roughly how much of the ceiling of your garage will be beneath second floor finished space?:159} )",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "161",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 186,
+      "label": "We will account for a basement utility room of approximately (Sq. Ft):",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Great.  How large of an unfinished basement utility room do you plan to have?:163}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "161",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 311,
+      "label": "You are planning on having a finished basement of approximately (Sq. Ft):",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Perfect.  Thanks for all that information.  Based on the number of rooms and their approximate sizes, it looks like the basement finished space will need to be approximately::179} + {How many square feet of your basement do you plan to finish?:166} + {ALL OF BASEMENT - 1 floor:430} + {ALL OF BASEMENT - 2 or more floors:431}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "161",
+            "operator": "is",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "162",
+            "operator": "isnot",
+            "value": "All of it"
+          }
+        ]
+      }
+    },
+    {
+      "id": 437,
+      "label": "You are planning to finish all of the basement, which is approximately (Sq. Ft):",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "( ( ( {Interior Living Space (Sq. Ft.):105} + {Square Feet::142} )  / {How many stories above ground will your home be?:145} ) - {Assuming a basement utility room space of approximately::186} ) - ( ({Thanks.  We assume the square footage of your garage will be::157} + {Great. How many square feet is your garage?:147} + {Great.  How many square feet will this extra garage space be?:154}) * {Roughly how much of the ceiling of your garage will be beneath second floor finished space?:159} )",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "161",
+            "operator": "is",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "162",
+            "operator": "is",
+            "value": "All of it"
+          }
+        ]
+      }
+    },
+    {
+      "id": 436,
+      "label": "It seems like your planning to finish a larger basement area than you have available...",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "189",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 386,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 189,
+      "label": "Would you happen to have any photos or images of homes or floor plans that you have seen, which have influenced what you would like your home to look like?",
+      "type": "radio"
+    },
+    {
+      "id": 190,
+      "label": "That's great!  Any images you can send us are very helpful in painting a clearer picture of what you would like your home to look like.  This can not only speed up the design process, but can make for a more efficient estimating process as well.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "189",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 192,
+      "label": "No problem.  Our designer will guide you through their standard design process.  However, any images you provide will give us additional insight and can not only speed up the design process, but can make for a more efficient estimating process as well.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "189",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 193,
+      "label": "Identifying specifically what you like and dislike in any images you can provide will also help us and our designer avoid accidentally account for features you want to avoid.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "189",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 387,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 195,
+      "label": "The next step in our process",
+      "type": "html"
+    },
+    {
+      "id": 196,
+      "label": "However, design professionals differ from one to the next",
+      "type": "html"
+    },
+    {
+      "id": 388,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 339,
+      "label": "Sunter Homes has been working with",
+      "type": "html"
+    },
+    {
+      "id": 197,
+      "label": "Architectural Technologists are trained primarily in the preparation",
+      "type": "html"
+    },
+    {
+      "id": 198,
+      "label": "Architects are trained to consider,",
+      "type": "html"
+    },
+    {
+      "id": 389,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 199,
+      "label": "Generally, budget is often the key influence in determining",
+      "type": "html"
+    },
+    {
+      "id": 407,
+      "label": "For budgetary purposes, which design professional do you think is the best fit for you?",
+      "type": "radio"
+    },
+    {
+      "id": 201,
+      "label": "Okay.  That sounds good.  We'll assume an Architectural Technologist for now.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "407",
+            "operator": "is",
+            "value": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 408,
+      "label": "ArchTechnologist Cost",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "( {So to summarize, the amount of finished space you would like in your new home will have a square footage of::183} + {The square footage of your garage will be approximately::185} ) * 5",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "407",
+            "operator": "isnot",
+            "value": "35000"
+          }
+        ]
+      }
+    },
+    {
+      "id": 202,
+      "label": "Okay.  That sounds good.  We'll assume an Architect for now.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "407",
+            "operator": "is",
+            "value": "35000"
+          }
+        ]
+      }
+    },
+    {
+      "id": 203,
+      "label": "That's alright.  Let\u2019s just assume an Architectural Technologist for the time being in the interest of keeping costs as low as possible.",
+      "type": "html"
+    },
+    {
+      "id": 390,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 204,
+      "label": "Interior Designer",
+      "type": "section"
+    },
+    {
+      "id": 205,
+      "label": "While it is not a hard rule that you need to work with an interior designer",
+      "type": "html"
+    },
+    {
+      "id": 206,
+      "label": "Would you like us to account for using our interior designer\u2019s services for the time being?",
+      "type": "radio"
+    },
+    {
+      "id": 207,
+      "label": "Okay.  We'll assume for the time being that we\u2019ll be using an interior designer.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "206",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 208,
+      "label": "Okay.  We'll assume for the time being that you\u2019ll be confirming all interior material selections.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "206",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 209,
+      "label": "That's alright.  Let's just assume for the time being that we\u2019ll be using an interior designer unless you inform us otherwise.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "206",
+            "operator": "is",
+            "value": "I don't know"
+          }
+        ]
+      }
+    },
+    {
+      "id": 391,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 211,
+      "label": "General Location of Property",
+      "type": "section",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "206",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 210,
+      "label": "One more significant consideration in determining pre-construction costs is the City lot development fee which is based on the location of your home as well as if you will be increasing the number of dwellings on the property.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "206",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 212,
+      "label": "Which of the following best describes the location of your property:",
+      "type": "select",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "206",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 452,
+      "label": "You've selected 'Rural Ottawa - Serviced', this means....",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "212",
+            "operator": "is",
+            "value": "29378"
+          }
+        ]
+      }
+    },
+    {
+      "id": 453,
+      "label": "You've selected 'Rural Ottawa - Unserviced', this means....",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "212",
+            "operator": "is",
+            "value": "26737"
+          }
+        ]
+      }
+    },
+    {
+      "id": 214,
+      "label": "Okay.  Municipalities outside of Ottawa generally have fees which are a fraction of what they are within Ottawa.  We\u2019ll account for $10,000 as a placeholder for the time being.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "212",
+            "operator": "is",
+            "value": "Municipality outside of Ottawa"
+          }
+        ]
+      }
+    },
+    {
+      "id": 213,
+      "label": "That\u2019s alright.  We\u2019ll just account for outside the Ottawa Greenbelt for the time being.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "212",
+            "operator": "is",
+            "value": "I don't know"
+          }
+        ]
+      }
+    },
+    {
+      "id": 226,
+      "label": "Building Type:",
+      "type": "radio"
+    },
+    {
+      "id": 215,
+      "label": "And how many dwellings will be in the building?  For example, a semi detached would be 2 dwellings.",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "226",
+            "operator": "is",
+            "value": "0.8"
+          }
+        ]
+      }
+    },
+    {
+      "id": 456,
+      "label": "You chose a single home. That means there will be only 1 dwelling in the building.",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "226",
+            "operator": "is",
+            "value": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 455,
+      "label": "You chose a Multi-unit. How many dwellings will be in the building?",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "226",
+            "operator": "is",
+            "value": "0.75"
+          }
+        ]
+      }
+    },
+    {
+      "id": 331,
+      "label": "Number of dwellings cost",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{And how many dwellings will be in the building?  For example, a semi detached would be 2 dwellings.:215}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "215",
+            "operator": "isnot",
+            "value": "1"
+          },
+          {
+            "fieldId": "215",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 392,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 216,
+      "label": "Pre-Construction Cost Breakdown",
+      "type": "section"
+    },
+    {
+      "id": 281,
+      "label": "Architectural Design:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "35000 * 1",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "407",
+            "operator": "is",
+            "value": "35000"
+          }
+        ]
+      }
+    },
+    {
+      "id": 309,
+      "label": "Architectural Design:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{ArchTechnologist Cost:408}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "407",
+            "operator": "isnot",
+            "value": "35000"
+          }
+        ]
+      }
+    },
+    {
+      "id": 282,
+      "label": "Interior Design:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "( ( {Interior Living Space (Sq. Ft.):105} + {Square Feet::142} )   *  350 +  ({Great. How many square feet is your garage?:147} + {Thanks.  We assume the square footage of your garage will be::157} )  * 250 )  * 0.01",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "206",
+            "operator": "isnot",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 283,
+      "label": "Survey and Topographical Plan:",
+      "type": "number"
+    },
+    {
+      "id": 364,
+      "label": "Civil Engineering Water Drainage & Service Plan",
+      "type": "number"
+    },
+    {
+      "id": 284,
+      "label": "Septic Design:",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "212",
+            "operator": "is",
+            "value": "26737"
+          },
+          {
+            "fieldId": "212",
+            "operator": "is",
+            "value": "10000"
+          }
+        ]
+      }
+    },
+    {
+      "id": 285,
+      "label": "Structural Engineering:",
+      "type": "number"
+    },
+    {
+      "id": 286,
+      "label": "City Lot Development Fee (The services for each existing unit to be demolished reduce the required Development Permit Fees by 1):",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Which of the following best describes the location of your property::212} * ({And how many dwellings will be in the building?  For example, a semi detached would be 2 dwellings.:215} + {You chose a single home. That means there will be only 1 dwelling in the building.:456} + {You chose a Multi-unit. How many dwellings will be in the building?:455})"
+    },
+    {
+      "id": 287,
+      "label": "Building Permit:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "( {Square Feet::142} + {Interior Living Space (Sq. Ft.):105} + {The square footage of your garage will be approximately::185} ) * 1.06"
+    },
+    {
+      "id": 288,
+      "label": "Water Permit ($3,000 - refundable when old water service is capped):",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "212",
+            "operator": "isnot",
+            "value": "26737"
+          },
+          {
+            "fieldId": "212",
+            "operator": "isnot",
+            "value": "10000"
+          }
+        ]
+      }
+    },
+    {
+      "id": 289,
+      "label": "Cumulatively, these pre-construction costs add to approximately the following value (exclusive of HST):",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Architectural Design::281} + {Architectural Design:309} + {Interior Design::282} + {Survey and Topographical Plan::283} + {Septic Design::284} + {Structural Engineering::285} + {Building Permit::287} + {Water Permit ($3,000 - refundable when old water service is capped)::288} + {City Lot Development Fee (The services for each existing unit to be demolished reduce the required Development Permit Fees by 1)::286} + {Civil Engineering Water Drainage & Service Plan:364}"
+    },
+    {
+      "id": 393,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 219,
+      "label": "Construction Costs",
+      "type": "section"
+    },
+    {
+      "id": 220,
+      "label": "Finally we\u2019re ready to begin discussing construction costs.  Are you familiar with the concept of cost per square foot estimating?",
+      "type": "radio"
+    },
+    {
+      "id": 218,
+      "label": "Cost per square foot pricing is a widely practiced method in our industry",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "220",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 409,
+      "label": "",
+      "type": "page",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "220",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 410,
+      "label": "Cost per square foot pricing is a widely practiced method in our industry",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "220",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 412,
+      "label": "",
+      "type": "page",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "220",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 221,
+      "label": "Now that we both have equal understanding as to how your home may be estimated a a high level",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "220",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 413,
+      "label": "",
+      "type": "page",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "220",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 411,
+      "label": "Some of the other factors...",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "220",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 439,
+      "label": "",
+      "type": "page",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "220",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 438,
+      "label": "Some of the other factors... PT2",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "220",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 414,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 222,
+      "label": "Would you be able to let us know what your budget is for this project inclusive of HST and pre-construction costs?  Please exclude from this figure the extra 10% which we recommend you have access to just in case.",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "220",
+            "operator": "isnot",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 458,
+      "label": "Input Your budget below",
+      "type": "html"
+    },
+    {
+      "id": 223,
+      "label": "Your Project Budget:",
+      "type": "number"
+    },
+    {
+      "id": 464,
+      "label": "Minimum budget",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "223",
+            "operator": "<",
+            "value": "750000"
+          }
+        ]
+      }
+    },
+    {
+      "id": 394,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 224,
+      "label": "Okay!  Thank you very much for that information.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "223",
+            "operator": ">",
+            "value": "0"
+          }
+        ]
+      }
+    },
+    {
+      "id": 225,
+      "label": "Okay.  That's alright.  What we can do is review another short list of questions",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "222",
+            "operator": "is",
+            "value": "No"
+          },
+          {
+            "fieldId": "222",
+            "operator": "is",
+            "value": "I don't know"
+          }
+        ]
+      }
+    },
+    {
+      "id": 230,
+      "label": "House Style:",
+      "type": "radio"
+    },
+    {
+      "id": 229,
+      "label": "Number of Stories:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{How many stories above ground will your home be?:145} * 1"
+    },
+    {
+      "id": 227,
+      "label": "Number of dwellings requiring additional water supply and waste-water services connected to the house:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "({And how many dwellings will be in the building?  For example, a semi detached would be 2 dwellings.:215} + {You chose a single home. That means there will be only 1 dwelling in the building.:456} + {You chose a Multi-unit. How many dwellings will be in the building?:455}) - {Is there an existing building on the property to be demolished?:20}"
+    },
+    {
+      "id": 366,
+      "label": "Number of Floors Cost x2",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Bungalow minimum cost:266} * 0.1",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "145",
+            "operator": "is",
+            "value": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": 421,
+      "label": "Number of Floors Cost x3",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Bungalow minimum cost:266} * 0.133",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "145",
+            "operator": "is",
+            "value": "3"
+          }
+        ]
+      }
+    },
+    {
+      "id": 422,
+      "label": "Number of Floors Cost x4",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Bungalow minimum cost:266} * 0.166",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "145",
+            "operator": "is",
+            "value": "4"
+          }
+        ]
+      }
+    },
+    {
+      "id": 423,
+      "label": "Number of Floors Cost x5",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Bungalow minimum cost:266} * 0.2",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "145",
+            "operator": "is",
+            "value": "5"
+          }
+        ]
+      }
+    },
+    {
+      "id": 228,
+      "label": "Service Type:",
+      "type": "radio"
+    },
+    {
+      "id": 451,
+      "label": "You have selected Rural - Serviced, this means.....",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "228",
+            "operator": "is",
+            "value": "Well & Septic"
+          },
+          {
+            "fieldId": "212",
+            "operator": "is",
+            "value": "29378"
+          }
+        ]
+      }
+    },
+    {
+      "id": 308,
+      "label": "Water Service Cost",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Septic:274} + {Well:273} + {City Services:275} + {Which of the following best describes the location of your property::212}"
+    },
+    {
+      "id": 395,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 363,
+      "label": "Avg. Ceiling Height For Above Ground Levels:",
+      "type": "radio"
+    },
+    {
+      "id": 365,
+      "label": "Basement Ceiling Height:",
+      "type": "radio"
+    },
+    {
+      "id": 231,
+      "label": "Average Ceiling Height For Above Grade Floor Levels:",
+      "type": "number"
+    },
+    {
+      "id": 233,
+      "label": "Basement Ceiling Height",
+      "type": "number"
+    },
+    {
+      "id": 232,
+      "label": "Square Feet of Finished Basement:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{You are planning on having a finished basement of approximately (Sq. Ft)::311} + {You are planning to finish all of the basement, which is approximately (Sq. Ft)::437}",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "161",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 238,
+      "label": "Elevator?",
+      "type": "radio"
+    },
+    {
+      "id": 313,
+      "label": "Elevator cost",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Elevator?:238} +  ({Number of Stories::229} * 5000 )"
+    },
+    {
+      "id": 396,
+      "label": "",
+      "type": "page",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "146",
+            "operator": "is",
+            "value": "No Garage"
+          }
+        ]
+      }
+    },
+    {
+      "id": 235,
+      "label": "Garage Type:",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "146",
+            "operator": "is",
+            "value": "No Garage"
+          }
+        ]
+      }
+    },
+    {
+      "id": 236,
+      "label": "Garage Interior:",
+      "type": "radio",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "146",
+            "operator": "is",
+            "value": "No Garage"
+          }
+        ]
+      }
+    },
+    {
+      "id": 234,
+      "label": "Garage Square Feet:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{The square footage of your garage will be approximately::185}",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "146",
+            "operator": "is",
+            "value": "No Garage"
+          }
+        ]
+      }
+    },
+    {
+      "id": 397,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 240,
+      "label": "Energy Efficiency:",
+      "type": "radio"
+    },
+    {
+      "id": 239,
+      "label": "Heating Type:",
+      "type": "radio"
+    },
+    {
+      "id": 241,
+      "label": "Exterior Veneer",
+      "type": "select"
+    },
+    {
+      "id": 245,
+      "label": "Soil Condition:",
+      "type": "radio"
+    },
+    {
+      "id": 242,
+      "label": "Lot Condition:",
+      "type": "radio"
+    },
+    {
+      "id": 244,
+      "label": "Approximate distance from your new home to the property line?",
+      "type": "radio"
+    },
+    {
+      "id": 243,
+      "label": "Landscaping:",
+      "type": "radio"
+    },
+    {
+      "id": 246,
+      "label": "On How Many Sides will Your Home be within 6 Feet?",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "244",
+            "operator": "is",
+            "value": "30000"
+          }
+        ]
+      }
+    },
+    {
+      "id": 312,
+      "label": "Cost for proximity to neighbor",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Proximity of New House to Neighbour's House::244} * {On How Many Sides will Your Home be within 6 Feet?:246}"
+    },
+    {
+      "id": 398,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 251,
+      "label": "And one last question. Which of the following best describes your new home?",
+      "type": "radio"
+    },
+    {
+      "id": 425,
+      "label": "($) Basement Finishing",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "251",
+            "operator": "is",
+            "value": "0.975"
+          }
+        ]
+      }
+    },
+    {
+      "id": 426,
+      "label": "($$) Basement Finishing",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "251",
+            "operator": "is",
+            "value": "0.985"
+          }
+        ]
+      }
+    },
+    {
+      "id": 427,
+      "label": "($$$) Basement Finishing",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "251",
+            "operator": "is",
+            "value": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 428,
+      "label": "($$$$) Basement Finishing",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "251",
+            "operator": "is",
+            "value": "1.05"
+          }
+        ]
+      }
+    },
+    {
+      "id": 429,
+      "label": "($$$$$) Basement Finishing",
+      "type": "number",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "251",
+            "operator": "is",
+            "value": "1.1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 399,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 1,
+      "label": "Your Name:",
+      "type": "text"
+    },
+    {
+      "id": 280,
+      "label": "Your Phone Number:",
+      "type": "phone"
+    },
+    {
+      "id": 321,
+      "label": "Your Email Address:",
+      "type": "email"
+    },
+    {
+      "id": 444,
+      "label": "What brings you to Sunter Homes today?",
+      "type": "select"
+    },
+    {
+      "id": 4,
+      "label": "How did you hear about us?",
+      "type": "select"
+    },
+    {
+      "id": 3,
+      "label": "Referral (if applicable):",
+      "type": "text",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "4",
+            "operator": "is",
+            "value": "Referral"
+          }
+        ]
+      }
+    },
+    {
+      "id": 375,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 277,
+      "label": "House Square Feet",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Interior Living Space (Sq. Ft.):105} + {Square Feet::142}"
+    },
+    {
+      "id": 278,
+      "label": "Garage Square Feet",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Great. How many square feet is your garage?:147}+{Thanks.  We assume the square footage of your garage will be::157}"
+    },
+    {
+      "id": 290,
+      "label": "Finished Basement Square Feet",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Square Feet of Finished Basement::232}"
+    },
+    {
+      "id": 291,
+      "label": "Above grade home construction cost per square foot",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Above grade construction cost per square foot::253}"
+    },
+    {
+      "id": 292,
+      "label": "Basement Finishing Costs Per Square Foot",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Basement Finishing Cost:295} / {Finished Basement Square Feet:290}"
+    },
+    {
+      "id": 293,
+      "label": "Garage Cost Per Square Foot",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Unfinished garage:269}+{Basement minimum costs:268}"
+    },
+    {
+      "id": 252,
+      "label": "Thank you very much for going through those questions with me. Based on your answers, we recommend",
+      "type": "html"
+    },
+    {
+      "id": 337,
+      "label": "House Square Feet",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Interior Living Space (Sq. Ft.):105} + {Square Feet::142}"
+    },
+    {
+      "id": 333,
+      "label": "Above Grade Living Space Costs",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "( ({House Square Feet:337} * ( {Bungalow minimum cost:266} - {Number of Floors Cost x2:366} - {Number of Floors Cost x3:421} - {Number of Floors Cost x4:422} - {Number of Floors Cost x5:423})) + ({Water Service Cost:308} * ({And how many dwellings will be in the building?  For example, a semi detached would be 2 dwellings.:215} + {You chose a single home. That means there will be only 1 dwelling in the building.:456} + {You chose a Multi-unit. How many dwellings will be in the building?:455})) + {Elevator cost:313} + {Lot Condition::242} + ({Approximate distance from your new home to the property line?:244} * {On How Many Sides will Your Home be within 6 Feet?:246}) + {Soil Condition::245} * {Building Type::226} * {House Style::230} * {Energy Efficiency::240} * {Heating Type::239} + (({House Square Feet:337} * {Bungalow minimum cost:266}) * {Exterior Veneer:241}) + (({House Square Feet:337} * {Bungalow minimum cost:266}) * {Avg. Ceiling Height For Above Ground Levels::363}) ) * {And one last question. Which of the following best describes your new home?:251}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "145",
+            "operator": ">",
+            "value": "0"
+          }
+        ]
+      }
+    },
+    {
+      "id": 433,
+      "label": "Basement Finishing Cost (BTS Version)",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "( {You are planning on having a finished basement of approximately (Sq. Ft)::311} + {You are planning to finish all of the basement, which is approximately (Sq. Ft)::437} ) * (  {($) Basement Finishing:425} + {($$) Basement Finishing:426} + {($$$) Basement Finishing:427} + {($$$$) Basement Finishing:428} + {($$$$$) Basement Finishing:429}  )",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "162",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 434,
+      "label": "Garage Const Cost (Fin) (BTS)",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "(({Garage Square Feet::234} * 150) + ({Garage Type::235} * ({Garage Square Feet::234} * 150)) + ({Garage Interior::236} * ({Garage Square Feet::234} * 150)) + ({Energy Efficiency::240} * ({Garage Square Feet::234} * 150)) + ({Exterior Veneer:241} * ({Garage Square Feet::234} * 150))) - (({Garage Square Feet::234} * 150) * 3) * {And one last question. Which of the following best describes your new home?:251}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "236",
+            "operator": "is",
+            "value": "1.15"
+          }
+        ]
+      }
+    },
+    {
+      "id": 435,
+      "label": "Garage Const Cost (Unfin) (BTS)",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "(({Garage Square Feet::234} * 150) + ({Garage Type::235} * ({Garage Square Feet::234} * 150)) + ({Garage Interior::236} * ({Garage Square Feet::234} * 150)) + ({Exterior Veneer:241} * ({Garage Square Feet::234} * 150))) - (({Garage Square Feet::234} * 150) * 2) * {And one last question. Which of the following best describes your new home?:251}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "236",
+            "operator": "is",
+            "value": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 253,
+      "label": "Above Ground construction cost per square foot:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "max( 390, ({Above Grade Living Space Costs:333} / {House Square Feet:337}))",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "145",
+            "operator": "<",
+            "value": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": 367,
+      "label": "Above Ground Construction Cost per Square Foot (Multi-Storey):",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "max( 350, ({Above Grade Living Space Costs:333} / {House Square Feet:337}))",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "145",
+            "operator": ">",
+            "value": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 254,
+      "label": "Basement finishing costs per square foot:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Basement Finishing Cost (BTS Version):433} / ( {You are planning on having a finished basement of approximately (Sq. Ft)::311} + {You are planning to finish all of the basement, which is approximately (Sq. Ft)::437} )"
+    },
+    {
+      "id": 317,
+      "label": "Garage Cost Per Square Foot",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "( {Garage Const Cost (Fin) (BTS):434} + {Garage Const Cost (Unfin) (BTS):435} )  /  {Garage Square Feet::234}"
+    },
+    {
+      "id": 400,
+      "label": "",
+      "type": "page"
+    },
+    {
+      "id": 256,
+      "label": "If we multiply",
+      "type": "html"
+    },
+    {
+      "id": 257,
+      "label": "Living area and exterior construction cost:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "( {Above Ground construction cost per square foot::253} + {Above Ground Construction Cost per Square Foot (Multi-Storey)::367} ) * {House Square Feet:337}"
+    },
+    {
+      "id": 295,
+      "label": "Basement Finishing Cost",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "( {You are planning on having a finished basement of approximately (Sq. Ft)::311} + {You are planning to finish all of the basement, which is approximately (Sq. Ft)::437} ) * {Basement finishing costs per square foot::254}"
+    },
+    {
+      "id": 319,
+      "label": "Garage Construction Cost (Finished)",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Garage Square Feet::234} * {Garage Cost Per Square Foot:317}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "236",
+            "operator": "is",
+            "value": "1.15"
+          }
+        ]
+      }
+    },
+    {
+      "id": 320,
+      "label": "Garage Construction Cost (Unfinished)",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Garage Square Feet::234} * {Garage Cost Per Square Foot:317}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "236",
+            "operator": "is",
+            "value": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 260,
+      "label": "Total construction cost (HST Excluded):",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Garage Construction Cost (Unfinished):320} + {Garage Construction Cost (Finished):319} + {Living area and exterior construction cost::257} + {Basement Finishing Cost:295}"
+    },
+    {
+      "id": 446,
+      "label": "Pre-Construction Costs (HST Excluded):",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Cumulatively, these pre-construction costs add to approximately the following value (exclusive of HST)::289}"
+    },
+    {
+      "id": 261,
+      "label": "HST of 13% adds up to approximately:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "({Total construction cost (HST Excluded)::260} + {Pre-Construction Costs (HST Excluded)::446}) * 0.13"
+    },
+    {
+      "id": 262,
+      "label": "Total Cost (Pre-construction Cost & HST Included):",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "({Total construction cost (HST Excluded)::260} + {Pre-Construction Costs (HST Excluded)::446} ) * 1.13"
+    },
+    {
+      "id": 460,
+      "label": "Total Cost Disclaimer",
+      "type": "html"
+    },
+    {
+      "id": 459,
+      "label": "Your total estimated cost could be as low as:",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "(( ({House Square Feet:337} \n* ( {Bungalow minimum cost:266} \n- {Number of Floors Cost x2:366} \n- {Number of Floors Cost x3:421} \n- {Number of Floors Cost x4:422} \n- {Number of Floors Cost x5:423})) \n+ ({Water Service Cost:308} \n* ({And how many dwellings will be in the building?  For example, a semi detached would be 2 dwellings.:215} \n+ {You chose a single home. That means there will be only 1 dwelling in the building.:456} \n+ {You chose a Multi-unit. How many dwellings will be in the building?:455})) \n+ {Elevator cost:313} \n+ {Lot Condition::242} \n+ ({Approximate distance from your new home to the property line?:244} * {On How Many Sides will Your Home be within 6 Feet?:246}) \n+ {Soil Condition::245} \n* {Building Type::226} \n* 1\n* 1\n* 0.98\n+ (({House Square Feet:337} \n* {Bungalow minimum cost:266}) \n* {Exterior Veneer:241}) \n+ (({House Square Feet:337} \n* {Bungalow minimum cost:266}) \n* {Avg. Ceiling Height For Above Ground Levels::363}) ) \n* 0.975\n + {Pre-Construction Costs (HST Excluded)::446} ) * 1.13"
+    },
+    {
+      "id": 462,
+      "label": "Elevator Note",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "12",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 465,
+      "label": "Elevator Note",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "238",
+            "operator": "is",
+            "value": "30000"
+          },
+          {
+            "fieldId": "12",
+            "operator": "is",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 276,
+      "label": "Your Budget",
+      "type": "section"
+    },
+    {
+      "id": 294,
+      "label": "Above Grade Living Space Costs",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "(({Service Type (Cost):308} + {Elevator cost:313} + {Lot Condition::242} + {Cost for proximity to neighbor:312} + {Soil Condition::245}) + ((({House Square Feet:337} * {High End home:270}) * ({Building Type::226} - 1)) + (({House Square Feet:337} * {High End home:270}) * ({House Style::230} - 1)) + (({House Square Feet:337} * {High End home:270}) * ({Heating Type::239} - 1)) + (({House Square Feet:337} * {High End home:270})* ({Landscaping::243} - 1)) + (({House Square Feet:337} * {High End home:270}) * ({Exterior Veneer:241} - 1))) + ({House Square Feet:337} * {High End home:270})) * (-1)",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "145",
+            "operator": "is",
+            "value": "1"
+          },
+          {
+            "fieldId": "145",
+            "operator": "is",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 315,
+      "label": "Above Grade Living Space Costs - Multi-Storey",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "(({Service Type (Cost):308} + {Elevator cost:313} + {Lot Condition::242} + {Cost for proximity to neighbor:312} + {Soil Condition::245}) + ((({House Square Feet:337} * {High End home:270}) * ({Building Type::226} - 1)) + (({House Square Feet:337} * {High End home:270}) * ({House Style::230} - 1)) + (({House Square Feet:337} * {High End home:270}) * ({Heating Type::239} - 1)) + (({House Square Feet:337} * {High End home:270})* ({Landscaping::243} - 1)) + (({House Square Feet:337} * {High End home:270}) * ({Exterior Veneer:241} - 1))) + ({House Square Feet:337} * {High End home:270})) * (-1)",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "any",
+        "rules": [
+          {
+            "fieldId": "145",
+            "operator": ">",
+            "value": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 318,
+      "label": "Basement Finishing Cost",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "(( {How many square feet of your basement do you plan to finish?:166} + {Perfect.  Thanks for all that information.  Based on the number of rooms and their approximate sizes, it looks like the basement finished space will need to be approximately::179} )  *  (110)) * {And one last question. Which of the following best describes your new home?:251}"
+    },
+    {
+      "id": 296,
+      "label": "Garage Construction Cost (Finished)",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Garage Construction Cost (Finished):319}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "236",
+            "operator": "is",
+            "value": "1.15"
+          }
+        ]
+      }
+    },
+    {
+      "id": 310,
+      "label": "Garage Construction Cost (Unfinished)",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Garage Construction Cost (Unfinished):320}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "236",
+            "operator": "is",
+            "value": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 297,
+      "label": "Construction costs",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Above Grade Living Space Costs:294} + {Above Grade Living Space Costs - Multi-Storey:315} + {Basement Finishing Cost:295} + {Garage Construction Cost (Unfinished):320} + {Garage Construction Cost (Finished):319}"
+    },
+    {
+      "id": 298,
+      "label": "Construction HST",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Construction costs:297} * 0.13"
+    },
+    {
+      "id": 299,
+      "label": "Net Construction Cost (HST included)",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Construction costs:297} + {Construction HST:298}"
+    },
+    {
+      "id": 300,
+      "label": "Pre-Construction Costs",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Water Permit ($3,000 - refundable when old water service is capped)::288} + {Building Permit ($3,000 - $1.06/square foot)::287}  + {Architectural Design::281} + {Interior Design::282} + {Survey and Topographical Plan::283} + {Septic Design::284} + {Structural Engineering::285} + {City Lot Development Permit (Not applicable for apartments and row houses or replacing an existing building)::286}"
+    },
+    {
+      "id": 301,
+      "label": "Pre-Construction HST",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "( {Architectural Design::281} + {Interior Design::282} + {Survey and Topographical Plan::283} + {Septic Design::284} + {Structural Engineering::285} )  * 0.13"
+    },
+    {
+      "id": 302,
+      "label": "Net Pre-Construction Cost",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Pre-Construction Costs:300} + {Pre-Construction HST:301}"
+    },
+    {
+      "id": 303,
+      "label": "Gross Cost (Excluding HST)",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Construction costs:297} + {Pre-Construction Costs:300}"
+    },
+    {
+      "id": 304,
+      "label": "Net HST",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Pre-Construction HST:301} + {Construction HST:298}"
+    },
+    {
+      "id": 305,
+      "label": "Net Cost",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Net HST:304} + {Gross Cost (Excluding HST):303}"
+    },
+    {
+      "id": 306,
+      "label": "Budget",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Your Project Budget::223}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "223",
+            "operator": ">",
+            "value": "740000"
+          }
+        ]
+      }
+    },
+    {
+      "id": 307,
+      "label": "Budget difference",
+      "type": "number",
+      "enableCalculation": true,
+      "calculationFormula": "{Budget:306} - {Total construction cost (HST Included)::262}",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "222",
+            "operator": "is",
+            "value": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "id": 449,
+      "label": "We noticed that your current home rough estimate is over your budget...",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "307",
+            "operator": "<",
+            "value": "0"
+          }
+        ]
+      }
+    },
+    {
+      "id": 450,
+      "label": "Congratulations! Your new home estimate is within your budget.",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "307",
+            "operator": ">",
+            "value": "0"
+          }
+        ]
+      }
+    },
+    {
+      "id": 418,
+      "label": "...revisit previous steps...",
+      "type": "html"
+    },
+    {
+      "id": 419,
+      "label": "",
+      "type": "section"
+    },
+    {
+      "id": 415,
+      "label": "Please upload your files and photos below:",
+      "type": "fileupload"
+    },
+    {
+      "id": 417,
+      "label": "To receive the results, click 'Submit' below. If you do not want Sunter Homes to reach out to you, please check the box below:",
+      "type": "checkbox"
+    },
+    {
+      "id": 420,
+      "label": "",
+      "type": "section"
+    },
+    {
+      "id": 445,
+      "label": "If you're an installer or supplier looking to work with Sunter Homes...",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "show",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "444",
+            "operator": "is",
+            "value": "I'm an Installer / Supplier"
+          }
+        ]
+      }
+    },
+    {
+      "id": 401,
+      "label": "Would you like to set a date.....",
+      "type": "html",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "444",
+            "operator": "is",
+            "value": "I'm an Installer / Supplier"
+          }
+        ]
+      }
+    },
+    {
+      "id": 402,
+      "label": "Choose a date to be contacted:",
+      "type": "date",
+      "conditionalLogic": {
+        "actionType": "hide",
+        "logicType": "all",
+        "rules": [
+          {
+            "fieldId": "444",
+            "operator": "is",
+            "value": "I'm an Installer / Supplier"
+          }
+        ]
+      }
+    },
+    {
+      "id": 403,
+      "label": "CAPTCHA",
+      "type": "captcha"
+    },
+    {
+      "id": 442,
+      "label": "",
+      "type": "section"
+    },
+    {
+      "id": 432,
+      "label": "Would you like to be contacted immediately?",
+      "type": "checkbox"
+    }
+  ]
+}
